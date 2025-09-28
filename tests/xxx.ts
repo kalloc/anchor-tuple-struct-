@@ -11,8 +11,8 @@ describe("xxx", () => {
   it("Is initialized!", async () => {
     // Add your test here.
     const inst = await program.methods.initialize({trackVolume: {0: false}}).instruction();
-    console.log("Your transaction signature", inst.data.toString('hex'));
+    console.log("Track volume is false = ", inst.data.toString('hex'));
     const inst2 = await program.methods.initialize({trackVolume: {0: true}}).instruction();
-    console.log("Your transaction signature", inst2.data.toString('hex'));
+    console.log("Track volume is true = ", inst2.data.toString('hex'));
   });
 });
